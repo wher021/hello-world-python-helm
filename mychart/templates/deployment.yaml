@@ -16,4 +16,4 @@ spec:
       - name: my-python
         image: diva.teliacompany.net:7813/hello-world-willy
         ports:
-        - containerPort: 80
+        - containerPort: 5555
