@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-python
+spec:
+  selector:
+    matchLabels:
+      run: my-python
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-python
+    spec:
+      containers:
+      - name: my-python
+        image: diva.teliacompany.net:7813/hello-world-willy
+        ports:
+        - containerPort: 80
